@@ -6,4 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(username: "mike", password: "mike")
+User.delete_all
+
+mike = User.create(username: "mike", password: "mike")
+lou = User.create(username: "lou", password: "lou")
+
+score1 = Score.create(user_id: mike.id, points: 100, distance: 20)
+score2 = Score.create(user_id: lou.id, points: 1000, distance: 200)
+score3 = Score.create(user_id: lou.id, points: 500, distance: 100)
