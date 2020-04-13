@@ -3,12 +3,12 @@ class Api::V1::ScoresController < ApplicationController
     # GET / scores
     def index
         scores = Score.all
-        render json: scores.to_json(:include => {:user => {:only => :username}}, :except => [:created_at, :updated_at])
+        render json: scores.to_json(:except => [:created_at, :updated_at])
     end
 
     def show
         score = Score.find(params[:id])
-        render json: score.to_json(only: [:points, :distance, :user_id])
+        render json: score.to_json(only: [:points, :distance, :user_number, :username])
     end
 
     def create
@@ -23,7 +23,7 @@ class Api::V1::ScoresController < ApplicationController
     private
 
     def score_params
-        params.require(:score).permit(:points, :distance, :user_id)
+        params.require(:score).permit(:points, :distance, :user_number, :username)
     end
 
 end

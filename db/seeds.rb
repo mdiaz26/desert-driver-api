@@ -11,6 +11,6 @@ Score.delete_all
 # mike = User.create(username: "mike", password: "mike")
 # lou = User.create(username: "lou", password: "lou")
 
-# score1 = Score.create(user_id: mike.id, points: 100, distance: 20)
-# score2 = Score.create(user_id: lou.id, points: 1000, distance: 200)
-# score3 = Score.create(user_id: lou.id, points: 500, distance: 100)
+score1 = Score.create(user_number: 7, points: 100, distance: 20, username: "lou")
+score2 = Score.create(user_number: 7, points: 1000, distance: 200, username: "lou")
+score3 = Score.create(user_number: 6, points: 500, distance: 100, username: "mike")
