@@ -3,12 +3,12 @@ class Api::V1::UsersController < ApplicationController
     # GET / users
     def index
         users = User.all
-        render json: users.to_json(only: [:id, :username, :password])
+        render json: users.to_json(include: {:avatar => {only: :image}}, only: [:id, :username, :password])
     end
 
     def show
         user = User.find(params[:id])
-        render json: user.to_json(only: [:id, :username, :password])
+        render json: user.to_json(include: {:avatar => {only: :image}}, only: [:id, :username, :password])
     end
 
     def create

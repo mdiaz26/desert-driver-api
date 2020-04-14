@@ -7,10 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Score.delete_all
-
-# mike = User.create(username: "mike", password: "mike")
-# lou = User.create(username: "lou", password: "lou")
+Avatar.delete_all
+User.delete_all
 
 score1 = Score.create(user_number: 7, points: 100, distance: 20, username: "lou")
 score2 = Score.create(user_number: 7, points: 1000, distance: 200, username: "lou")
 score3 = Score.create(user_number: 6, points: 500, distance: 100, username: "mike")
+
+avatar1 = Avatar.create(name: "Sheep", image: '/Avatars/Sheep.png')
+avatar2 = Avatar.create(name: "Bear", image: '/Avatars/bear.png')
+avatar3 = Avatar.create(name: "Cloud", image: '/Avatars/cloud.png')
+avatar4 = Avatar.create(name: "Cactus", image: '/Avatars/cactus.png')
+avatar5 = Avatar.create(name: "No Face", image: '/Avatars/noface.png')
+avatar6 = Avatar.create(name: "Sloth", image: '/Avatars/sloth.png')
+
+lou = User.create(username: "lou", password: "lou", avatar_id: avatar1.id)
+mike = User.create(username: "mike", password: "mike", avatar_id: avatar2.id)
