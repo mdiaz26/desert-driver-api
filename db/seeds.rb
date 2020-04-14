@@ -20,6 +20,7 @@ avatar3 = Avatar.create(name: "Cloud", image: '/Avatars/cloud.png')
 avatar4 = Avatar.create(name: "Cactus", image: '/Avatars/cactus.png')
 avatar5 = Avatar.create(name: "No Face", image: '/Avatars/noface.png')
 avatar6 = Avatar.create(name: "Sloth", image: '/Avatars/sloth.png')
+avatar6 = Avatar.create(name: "Cain Firstman", image: '/caveman/cavemanFront.png')
 
 lou = User.create(username: "lou", password: "lou", avatar_id: avatar1.id)
 mike = User.create(username: "mike", password: "mike", avatar_id: avatar2.id)
