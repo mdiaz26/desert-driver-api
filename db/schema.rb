@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_13_233746) do
+ActiveRecord::Schema.define(version: 2020_04_16_154715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_233746) do
 
   create_table "scores", force: :cascade do |t|
     t.integer "points"
-    t.integer "distance"
+    t.integer "max_distance"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_number"

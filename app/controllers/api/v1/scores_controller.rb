@@ -8,7 +8,7 @@ class Api::V1::ScoresController < ApplicationController
 
     def show
         score = Score.find(params[:id])
-        render json: score.to_json(only: [:points, :distance, :user_number, :username])
+        render json: score.to_json(only: [:points, :max_distance, :user_number, :username])
     end
 
     def create
@@ -23,7 +23,7 @@ class Api::V1::ScoresController < ApplicationController
     private
 
     def score_params
-        params.require(:score).permit(:points, :distance, :user_number, :username)
+        params.require(:score).permit(:points, :max_distance, :user_number, :username)
     end
 
 end
