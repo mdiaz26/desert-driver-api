@@ -15,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
         print user_params
         user = User.new(user_params)
         if user.save
-            render json: user
+            render json: user.to_json(include: {:avatar => {only: [:id, :name, :image]}}, only: [:id, :username, :password])
         else
             render error: {error: 'Unable to create user'}, status: 400
         end
@@ -24,7 +24,8 @@ class Api::V1::UsersController < ApplicationController
     def update
         user = User.find(params[:id])
         user.update(user_params)
-        render json: user
+        render json: user.to_json(include: {:avatar => {only: [:id, :name, :image]}}, only: [:id, :username, :password])
+
     end
 
     def destroy
