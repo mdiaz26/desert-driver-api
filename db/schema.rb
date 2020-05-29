@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_16_154715) do
+ActiveRecord::Schema.define(version: 2020_05_29_125844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,11 @@ ActiveRecord::Schema.define(version: 2020_04_16_154715) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_number"
     t.string "username"
+    t.integer "coins"
+    t.integer "total_flips"
+    t.integer "best_flip"
+    t.integer "timer"
+    t.integer "best_flip_count"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,6 +42,10 @@ ActiveRecord::Schema.define(version: 2020_04_16_154715) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "avatar_id"
+    t.boolean "music_playing"
+    t.boolean "game_sound"
+    t.float "music_volume"
+    t.float "game_volume"
     t.index ["avatar_id"], name: "index_users_on_avatar_id"
   end
 

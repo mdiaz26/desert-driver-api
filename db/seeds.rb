@@ -24,5 +24,5 @@ avatar7 = Avatar.create(name: "Weiner Truck", image: '/Avatars/weiner-truck.png'
 # avatar8 = Avatar.create(name: "Fire Truck", image: '/Avatars/fire-truck.png')
 # avatar9 = Avatar.create(name: "School Bus", image: '/Avatars/school-bus.png')
 
-lou = User.create(username: "lou", password: "lou", avatar_id: avatar1.id)
+lou = User.create(username: "lou", password: "lou", avatar_id: avatar1.id, music_playing: false, game_sound: false, music_volume: 0.5, game_volume: 0.2)
 mike = User.create(username: "mike", password: "mike", avatar_id: avatar2.id)
