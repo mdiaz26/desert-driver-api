@@ -10,9 +10,9 @@ Score.delete_all
 Avatar.delete_all
 User.delete_all
 
-score1 = Score.create(user_number: 7, points: 100, max_distance: 20, username: "lou")
-score2 = Score.create(user_number: 7, points: 1000, max_distance: 200, username: "lou")
-score3 = Score.create(user_number: 6, points: 500, max_distance: 100, username: "mike")
+# score1 = Score.create(user_number: 7, points: 100, max_distance: 20, username: "lou")
+# score2 = Score.create(user_number: 7, points: 1000, max_distance: 200, username: "lou")
+# score3 = Score.create(user_number: 6, points: 500, max_distance: 100, username: "mike")
 
 avatar1 = Avatar.create(name: "Bad Santa", image: '/Avatars/bad-santa.png')
 avatar2 = Avatar.create(name: "Ice Cream Truck", image: '/Avatars/ice-cream-truck.png')
