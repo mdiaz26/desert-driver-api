@@ -26,7 +26,7 @@ module RunningGameApi
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'http://desert-driver-api.herokuapp.com/api/v1/'
         resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
       end
     end
